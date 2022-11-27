@@ -1,0 +1,31 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: url('/static/images/iStock-530199842.jpg');
+}
+
+div{
+    width: 100%;
+    height: 70px;
+}
+
+ul{
+    display: flex;
+    float: right;
+}
+
+ul li{
+    font-size: 1.8rem;
+    display: inline;
+    margin-right: 80px;
+    color: white;
+    text-decoration: none;
+}
+
+ul li:hover{
+    font-size: 1.9rem;
+}
+
+ul a li:hover{
+    color: chocolate;
+}
