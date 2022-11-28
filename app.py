@@ -121,7 +121,7 @@ def registrationform():
 
     data[9]=float(input('oldpeak : '))
 
-    var6=input('slope')
+    var6=input('slope : ')
     if var6=='Downsloping':
         data[10]=0
     elif var6=='Flat':
