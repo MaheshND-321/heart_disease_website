@@ -43,8 +43,6 @@ def registrationform():
     df.thalassemia[df.thalassemia =='Fixed Defect']=2
     df.thalassemia[df.thalassemia =='No']=3
 
-    #print(df)
-
     x = df.drop(['target'],axis=1)
     y=df['target']
 
@@ -70,22 +68,22 @@ def registrationform():
     x_test_prediction = model.predict(x_test)
     test_data_accuracy = accuracy_score(x_test_prediction, y_test)
 
-    print('Accyracy of the Training Data is :',training_data_accuracy*100,'%')
-    print('Accyracy of the Testing Data is :',test_data_accuracy*100,'%')
+    print('Accuracy of the Training Data is :',training_data_accuracy*100,'%')
+    print('Accuracy of the Testing Data is :',test_data_accuracy*100,'%')
 
     #Building the predictive systems
     data=[None]*13
 
     #Taking inputs from the users
     print("Enter the values Of :")
-    data[0]=int(input('age : '))
-    var1=input('sex : ')
+    data[0]=int(input('Age : '))
+    var1=input('Sex : (Male/Female)').lower()
     if var1=='Male':
         data[1]=0
     else:
         data[1]=1
         
-    var2=input('chest_pain_type : ')
+    var2=input('Chest Pain Type : (Typical angina/Atypical angina/Non-anginal pain/other) ').lower()
     if var2=='Typical angina':
         data[2]=0
     elif var2=='Atypical angina':
@@ -95,33 +93,33 @@ def registrationform():
     else:
         data[2]=3
         
-    data[3]=int(input('resting_blood_pressure : '))
-    data[4]=int(input('cholestoral : '))
+    data[3]=int(input('Resting Blood Pressure : '))
+    data[4]=int(input('Cholestoral : '))
 
-    var3=input('fasting_blood_sugar : ')
+    var3=input('Fasting Blood Sugar : ')
     if var3=='Lower than 120 mg/ml':
         data[5]=0
     else:
         data[5]=1
         
-    var4=input('rest_ecg : ')
-    if var4=='ST-T wave abnormality':
+    var4=input('Electrocardiogram : (ST-T wave abnormality/Normal/other)').lower()
+    if var4=='st-t wave abnormality':
         data[6]=0
-    elif var4=='Normal':
+    elif var4=='normal':
         data[6]=1
     else:
         data[6]=2
         
-    data[7]=int(input('Max_heart_rate : '))
-    var5=input('exercise_induced_angina : ')
+    data[7]=int(input('Maximum heart rate : '))
+    var5=input('Exercise induced angina :(No/Yes)').lower()
     if var5=='No':
         data[8]=0
     else:
         data[8]=1
 
-    data[9]=float(input('oldpeak : '))
+    data[9]=float(input('Oldpeak : '))
 
-    var6=input('slope : ')
+    var6=input('slope : (Downsloping/Flat)')
     if var6=='Downsloping':
         data[10]=0
     elif var6=='Flat':
@@ -129,7 +127,7 @@ def registrationform():
     else:
         data[10]=2
         
-    var7=input('vessels_colored_by_flourosopy : ')
+    var7=input('Vessels Colored by flourosopy : (zero/one/two/three)')
     if var7=='Zero':
         data[11]=0
     elif var7=='One':
@@ -141,7 +139,7 @@ def registrationform():
     else:
         data[11]=4
         
-    var8=input('thalassemia : ')
+    var8=input('Thalassemia : (Reversable Defect/Normal/Fixed Defect)')
     if var8=='Reversable Defect':
         data[12]=0
     elif var8=='Normal':
