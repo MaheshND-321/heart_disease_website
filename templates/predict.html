@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prection_model</title>
+</head>
+<body>
+    <h1>Welocome To Heart_Disease_Prediction Model</h1>
+    {{ prediction_text }}
+    <form action="post" action="{{ url_for('predict') }}">
+        <fieldset>
+            Age : <input type="text" name="age">
+            <br>
+            Sex : <input type="text" name="sex">
+            <br>
+            Chest_pain_type : <input type="text" name="chest">
+            <br>
+            Resting_blood_pressure : <input type="text" name="bp">
+            <br>
+            Cholestoral : <input type="text" name="chol">
+            <br>
+            Fasting_blood_sugar : <input type="text" name="sugar">
+            <br>
+            Rest_ecg : <input type="text" name="ecg">
+            <br>
+            Max_heart_rate : <input type="text" name="hrt_rate">
+            <br>
+            Exercise_induced_angina : <input type="text" name="exer">
+            <br>
+            Oldpeak : <input type="text" name="peak">
+            <br>
+            Slope : <input type="text" name="slope">
+            <br>
+            vessels_colored_by_flourosopy : <input type="text" name="color">
+            <br>
+            Thalassemia : <input type="text" name="thala">
+            <br>
+            <button type="submit" class="btn">Predict</button>
+        </fieldset>
+    </form>
+</body>
+</html>
