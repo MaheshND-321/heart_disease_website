@@ -121,7 +121,7 @@ def registrationform():
 
     data[9]=float(input('oldpeak : '))
 
-    var6=input('slope')
+    var6=input('slope : ')
     if var6=='Downsloping':
         data[10]=0
     elif var6=='Flat':
@@ -164,7 +164,7 @@ def registrationform():
         print("The Person does not have Heart Disease")
     else:
         print("Sorry the Person have Heart Disease")
-
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
