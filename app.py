@@ -31,7 +31,7 @@ def predict():
     color = request.form['color']
     thala = request.form['thala']
 
-<<<<<<< HEAD
+
     data_1=0
     data_2=0
     data_3=0
@@ -49,7 +49,6 @@ def predict():
     #print("Enter the values Of :")
     data_0 = int(age)
     var1 = str(sex)
-=======
     x = df.drop(['target'],axis=1)
     y=df['target']
 
@@ -85,17 +84,16 @@ def predict():
     print("Enter the values Of :")
     data[0]=int(input('Age : '))
     var1=input('Sex : (Male/Female)').lower()
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
     if var1=='Male':
         data_1=0
     else:
         data_1=1
         
-<<<<<<< HEAD
+
     var2= str(chest)
-=======
+
     var2=input('Chest Pain Type : (Typical angina/Atypical angina/Non-anginal pain/other) ').lower()
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
+
     if var2=='Typical angina':
         data_2=0
     elif var2=='Atypical angina':
@@ -105,59 +103,54 @@ def predict():
     else:
         data_2=3
         
-<<<<<<< HEAD
+
     data_3= int(bp)
     data_4= int(chol)
 
     var3= str(sugar)
-=======
+
     data[3]=int(input('Resting Blood Pressure : '))
     data[4]=int(input('Cholestoral : '))
 
     var3=input('Fasting Blood Sugar : ')
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
+
     if var3=='Lower than 120 mg/ml':
         data_5=0
     else:
         data_5=1
         
-<<<<<<< HEAD
+
     var4= str(ecg)
     if var4=='ST-T wave abnormality':
         data_6=0
     elif var4=='Normal':
         data_6=1
-=======
+
     var4=input('Electrocardiogram : (ST-T wave abnormality/Normal/other)').lower()
     if var4=='st-t wave abnormality':
         data[6]=0
     elif var4=='normal':
         data[6]=1
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
     else:
         data_6=2
         
-<<<<<<< HEAD
     data_7=int(hrt_rate)
     var5=str(exer)
-=======
+
     data[7]=int(input('Maximum heart rate : '))
     var5=input('Exercise induced angina :(No/Yes)').lower()
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
     if var5=='No':
         data_8=0
     else:
         data_8=1
 
-<<<<<<< HEAD
     data_9=float(peak)
 
     var6=str(slope)
-=======
+
     data[9]=float(input('Oldpeak : '))
 
     var6=input('slope : (Downsloping/Flat)')
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
     if var6=='Downsloping':
         data_10=0
     elif var6=='Flat':
@@ -165,11 +158,9 @@ def predict():
     else:
         data_10=2
         
-<<<<<<< HEAD
     var7=str(color)
-=======
+
     var7=input('Vessels Colored by flourosopy : (zero/one/two/three)')
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
     if var7=='Zero':
         data_11=0
     elif var7=='One':
@@ -181,11 +172,9 @@ def predict():
     else:
         data_11=4
         
-<<<<<<< HEAD
     var8=str(thala)
-=======
+
     var8=input('Thalassemia : (Reversable Defect/Normal/Fixed Defect)')
->>>>>>> 2767f23b2cfe9d3eab9d3d337666a76287ea954e
     if var8=='Reversable Defect':
         data_12=0
     elif var8=='Normal':

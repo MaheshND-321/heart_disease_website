@@ -29,3 +29,18 @@ ul li:hover{
 ul a li:hover{
     color: chocolate;
 }
+
+
+form{
+    background-color: white;
+    margin: 100px 500px;
+
+}
+
+fieldset{
+    text-align: center;
+}
+
+input{
+    margin: 5px 10px;
+}
